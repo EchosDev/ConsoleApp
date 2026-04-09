@@ -163,7 +163,41 @@ namespace CourseApp.Controllers
                 Helper.Print(ConsoleColor.Red, "No result found");
             }
         }
+        public void GroupMenu()
+        {
+            while (true)
+            {
+                Helper.Print(ConsoleColor.Yellow, "=== GROUP MENU ===");
+                Helper.Print(ConsoleColor.Yellow, "1 - Create, 2 - Update, 3 - Delete, 4 - GetById, " +
+                "5 - Get By Teacher, 6 - Get By Room, 7 - Get All, 8 - Back to Main Menu");
 
+                string selectedOption = Console.ReadLine();
+                int selectedOptionNum;
+                bool isSelectedOption = int.TryParse(selectedOption, out selectedOptionNum);
 
+                if (isSelectedOption)
+                {
+                    if (selectedOptionNum == 8) break;
+
+                    switch (selectedOptionNum)
+                    {
+                        case 1: CreateGroup(); break;
+                        case 2: UptadeGroup(); break;
+                        case 3: DeleteGroup(); break;
+                        case 4: GetGroupById(); break;
+                        case 5: GetGroupsByTeacher(); break;
+                        case 6: GetGroupsByRoom(); break;
+                        case 7: GetAllGroups(); break;
+                        default:
+                            Helper.Print(ConsoleColor.Red, "Please enter valid option value");
+                            break;
+                    }
+                }
+                else
+                {
+                    Helper.Print(ConsoleColor.Red, "Please enter valid option type");
+                }
+            }
+        }
     }
 }

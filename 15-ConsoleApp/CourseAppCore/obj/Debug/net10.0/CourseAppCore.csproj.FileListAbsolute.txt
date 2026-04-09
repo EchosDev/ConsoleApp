@@ -9,3 +9,4 @@ C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\refint\CourseAppCore.dll
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.pdb
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\ref\CourseAppCore.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.sourcelink.json

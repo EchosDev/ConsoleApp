@@ -7,50 +7,49 @@ namespace CourseApp
     {
         static void Main(string[] args)
         {
+            Thread soundThread = new Thread(Helper.PlayIntro);
+            soundThread.Start();
+
+            Helper.ShowLoading();
+
             GroupController groupController = new();
 
-            Helper.Print(ConsoleColor.Blue, "Select One Option");
-            Helper.Print(ConsoleColor.Yellow, "1 - Create Group, 2 - Update group, 3 - Delete Group, 4 - Get group by id, \n" +
-                "5 - Get all groups by teacher , 6 - Get all groups by room, 7 - Get all groups, 8 - Create Student, 9 - Update Student, \n" +
-                "10- Get student  by id, 11 - Delete student,12 - Get students by age, 13 - Get all students by group id, \n" +
-                "14- Search for groups by name, 15 - Search for students by name or surname.");
+            Helper.Print(ConsoleColor.Cyan, "COURSE MANAGEMENT SYSTEM v1.0\n");
+
             while (true)
             {
-                string selectedOption = Console.ReadLine();
+                Helper.Print(ConsoleColor.Yellow, "==== MAIN MENU ====");
+                Helper.Print(ConsoleColor.Yellow, "1.Course Group Menu \n2.Student Menu \n0.Exit");
+            MainInput:
+                Helper.Print(ConsoleColor.Blue, "Enter Your Choice");
 
-                int selectedOptionNum;
+                string choice = Console.ReadLine();
 
-                bool isSelectedOption = int.TryParse(selectedOption, out selectedOptionNum);
+                int choiceNum;
 
-                if (isSelectedOption)
+                bool isChoice = int.TryParse(choice, out choiceNum);
+
+                if (choiceNum == 0) break;
+                if (isChoice)
                 {
-                    switch (selectedOptionNum)
+                    switch (choiceNum)
                     {
-                        case 1:
-                            groupController.CreateGroup();
-                            break;
-                        case 2:
-                            groupController.UptadeGroup();
-                            break;
-                        case 3:
-                            groupController.DeleteGroup();
-                            break;
-                        case 4:
-                            groupController.GetGroupById();
-                            break;
-                        case 5:
-                            groupController.GetGroupsByTeacher();
-                            break;
-                        default:
-                            Helper.Print(ConsoleColor.Red, "Please enter valid option value");
-                            break;
+                        case 1:groupController.GroupMenu();break;
+                        case 2: break;
+                        default: Helper.Print(ConsoleColor.Red, "Please enter valid choice value"); break;
                     }
                 }
                 else
                 {
-                    Helper.Print(ConsoleColor.Red, "Please enter valid option type");
+                    Helper.Print(ConsoleColor.Red, "Please enter valid choice type");
+                    goto MainInput;
                 }
             }
+        }
+
+        public static void Wait()
+        {
+
         }
     }
 }

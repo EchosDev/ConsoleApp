@@ -15,3 +15,4 @@ C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\refint\CourseAppService.dll
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.pdb
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\ref\CourseAppService.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.sourcelink.json

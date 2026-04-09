@@ -13,3 +13,4 @@ C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppRepository\obj\Debug\ne
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppRepository\obj\Debug\net10.0\refint\CourseAppRepository.dll
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppRepository\obj\Debug\net10.0\CourseAppRepository.pdb
 C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppRepository\obj\Debug\net10.0\ref\CourseAppRepository.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppRepository\obj\Debug\net10.0\CourseAppRepository.sourcelink.json
