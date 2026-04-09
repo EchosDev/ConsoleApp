@@ -1,9 +1,6 @@
 ﻿using CourseApp.Helpers;
 using CourseAppCore.Entities;
 using CourseAppService.Services.Implementations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CourseApp.Controllers
 {
@@ -12,6 +9,7 @@ namespace CourseApp.Controllers
         private static GroupService _groupService = new();
         public void CreateGroup()
         {
+        CreateGroupSection:
             Helper.Print(ConsoleColor.Blue, "Enter Group Name:");
             string groupName = Console.ReadLine();
 
@@ -29,10 +27,12 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please enter valid values");
+                goto CreateGroupSection;
             }
         }
         public void UptadeGroup()
         {
+        GroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Group Id:");
             string groupIdStr = Console.ReadLine();
             int groupId;
@@ -57,10 +57,12 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please enter valid id type");
+                goto GroupIdInput;
             }
         }
         public void DeleteGroup()
         {
+        GroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Group Id:");
             string groupIdStr = Console.ReadLine();
             int groupId;
@@ -74,10 +76,12 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please enter valid id type");
+                goto GroupIdInput;
             }
         }
         public void GetGroupById()
         {
+        GroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Group Id:");
             string groupIdStr = Console.ReadLine();
             int groupId;
@@ -98,10 +102,12 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please enter valid id type");
+                goto GroupIdInput;
             }
         }
         public void GetGroupsByTeacher()
         {
+        GroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Teacher Name");
             string groupTeacher = Console.ReadLine();
             if (!string.IsNullOrEmpty(groupTeacher))
@@ -110,8 +116,8 @@ namespace CourseApp.Controllers
                 if (findedGroups.Count != 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Group has been finded \nGroup Infos:");
-                    Console.WriteLine(string.Join(", ", findedGroups));
+                    Console.WriteLine($"Groups has been finded \nGroup of Infos:");
+                    Console.WriteLine(string.Join("\n", findedGroups));
                     Console.ResetColor();
                 }
                 else
@@ -122,10 +128,12 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please fill Teacher Name area");
+                goto GroupIdInput;
             }
         }
         public void GetGroupsByRoom()
         {
+        RoomInput:
             Helper.Print(ConsoleColor.Blue, "Enter Room");
             string groupRoom = Console.ReadLine();
             if (!string.IsNullOrEmpty(groupRoom))
@@ -135,7 +143,7 @@ namespace CourseApp.Controllers
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"Group has been finded \nGroup Infos:");
-                    Console.WriteLine(string.Join(", ", findedGroups));
+                    Console.WriteLine(string.Join("\n", findedGroups));
                     Console.ResetColor();
                 }
                 else
@@ -146,6 +154,7 @@ namespace CourseApp.Controllers
             else
             {
                 Helper.Print(ConsoleColor.Red, "Please fill Room area");
+                goto RoomInput;
             }
         }
         public void GetAllGroups()
@@ -155,7 +164,7 @@ namespace CourseApp.Controllers
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Group has been finded \nGroup Infos:");
-                Console.WriteLine(string.Join(", ", findedGroups));
+                Console.WriteLine(string.Join("\n", findedGroups));
                 Console.ResetColor();
             }
             else
@@ -163,13 +172,40 @@ namespace CourseApp.Controllers
                 Helper.Print(ConsoleColor.Red, "No result found");
             }
         }
+        public void SearchForGroupsByName()
+        {
+        GroupNameInput:
+            Helper.Print(ConsoleColor.Blue, "Enter Group Name");
+            string groupName = Console.ReadLine();
+            if (!string.IsNullOrEmpty(groupName))
+            {
+                var findedGroups = _groupService.SearchByName(groupName);
+                if (findedGroups.Count != 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Groups has been finded \nGroup of Infos:");
+                    Console.WriteLine(string.Join("\n", findedGroups));
+                    Console.ResetColor();
+                }
+                else
+                {
+                    Helper.Print(ConsoleColor.Red, "No result found for the given name");
+                }
+            }
+            else
+            {
+                Helper.Print(ConsoleColor.Red, "Please fill Name area");
+                goto GroupNameInput;
+            }
+        }
         public void GroupMenu()
         {
             while (true)
             {
+            GroupMenu:
                 Helper.Print(ConsoleColor.Yellow, "=== GROUP MENU ===");
                 Helper.Print(ConsoleColor.Yellow, "1 - Create, 2 - Update, 3 - Delete, 4 - GetById, " +
-                "5 - Get By Teacher, 6 - Get By Room, 7 - Get All, 8 - Back to Main Menu");
+                "5 - Get By Teacher, 6 - Get By Room, 7 - Get All, 8 - Search by Group Name , 9 - Back to Main Menu");
 
                 string selectedOption = Console.ReadLine();
                 int selectedOptionNum;
@@ -177,7 +213,7 @@ namespace CourseApp.Controllers
 
                 if (isSelectedOption)
                 {
-                    if (selectedOptionNum == 8) break;
+                    if (selectedOptionNum == 9) break;
 
                     switch (selectedOptionNum)
                     {
@@ -188,14 +224,16 @@ namespace CourseApp.Controllers
                         case 5: GetGroupsByTeacher(); break;
                         case 6: GetGroupsByRoom(); break;
                         case 7: GetAllGroups(); break;
+                        case 8: SearchForGroupsByName(); break;
                         default:
                             Helper.Print(ConsoleColor.Red, "Please enter valid option value");
-                            break;
+                            goto GroupMenu;
                     }
                 }
                 else
                 {
                     Helper.Print(ConsoleColor.Red, "Please enter valid option type");
+                    goto GroupMenu;
                 }
             }
         }

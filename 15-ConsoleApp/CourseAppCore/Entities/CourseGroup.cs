@@ -12,7 +12,7 @@ namespace CourseAppCore.Entities
         public string Room { get; set; }
         public override string ToString()
         {
-            return $"Group Name: {Name}, Teacher Name: {Teacher}, Room: {Room} \n";
+            return $"GroupID: {Id}, Group Name: {Name}, Teacher Name: {Teacher}, Room: {Room}";
         }
     }
 }

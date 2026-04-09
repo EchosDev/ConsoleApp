@@ -13,6 +13,7 @@ namespace CourseApp
             Helper.ShowLoading();
 
             GroupController groupController = new();
+            StudentController studentController = new();
 
             Helper.Print(ConsoleColor.Cyan, "COURSE MANAGEMENT SYSTEM v1.0\n");
 
@@ -34,9 +35,9 @@ namespace CourseApp
                 {
                     switch (choiceNum)
                     {
-                        case 1:groupController.GroupMenu();break;
-                        case 2: break;
-                        default: Helper.Print(ConsoleColor.Red, "Please enter valid choice value"); break;
+                        case 1: groupController.GroupMenu(); break;
+                        case 2: studentController.StudentMenu(); break;
+                        default: Helper.Print(ConsoleColor.Red, "Please enter valid choice value"); goto MainInput;
                     }
                 }
                 else
@@ -45,11 +46,6 @@ namespace CourseApp
                     goto MainInput;
                 }
             }
-        }
-
-        public static void Wait()
-        {
-
         }
     }
 }

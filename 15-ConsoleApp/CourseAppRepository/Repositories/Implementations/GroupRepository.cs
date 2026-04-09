@@ -12,7 +12,6 @@ namespace CourseAppRepository.Repositories.Implementations
             try
             {
                 if (data is null) throw new NotFoundException("Data not found");
-
                 AppDbContext<CourseGroup>.datas.Add(data);
             }
             catch (Exception ex)

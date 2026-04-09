@@ -1,10 +1,6 @@
 ﻿using CourseAppCore.Entities;
 using CourseAppRepository.Repositories.Implementations;
 using CourseAppService.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.RegularExpressions;
 
 namespace CourseAppService.Services.Implementations
 {

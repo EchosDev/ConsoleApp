@@ -1,52 +1,66 @@
 ﻿using CourseAppCore.Entities;
+using CourseAppRepository.Exceptions;
+using CourseAppRepository.Repositories.Implementations;
 using CourseAppService.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CourseAppService.Services.Implementations
 {
     public class StudentService : IStudentService
     {
-        public Student CreateStudent(Student group)
-        {
-            throw new NotImplementedException();
-        }
+        private static int _studentId = 0;
+        private static StudentRepository _studentRepository = new();
+        private static GroupService _groupService = new();
 
-        public Student UpdateStudent(int id, string name, string surname, int age, int groupId)
+        public Student CreateStudent(int groupId, Student student)
         {
-            throw new NotImplementedException();
-        }
+            _studentId++;
+            student.Id = _studentId;
 
+            var group = _groupService.GetGroupById(groupId);
+            student.Group = group;
+
+            _studentRepository.Create(student);
+
+            return student;
+        }
+        public Student UpdateStudent(int id, string name, string surname, int? age, int? groupId)
+        {
+            var existStudent = GetStudentById(id);
+            if (!string.IsNullOrWhiteSpace(name)) existStudent.Name = name;
+            if (!string.IsNullOrWhiteSpace(surname)) existStudent.Surname = surname;
+            if (age.HasValue) existStudent.Age = age.Value;
+            if (groupId.HasValue) existStudent.Group = _groupService.GetGroupById(groupId.Value);
+
+            _studentRepository.Update(existStudent);
+            return existStudent;
+        }
         public void DeleteStudent(int id)
         {
-            throw new NotImplementedException();
+            var existStudent = GetStudentById(id);
+            _studentRepository.Delete(existStudent);
         }
         public Student GetStudentById(int id)
         {
-            throw new NotImplementedException();
+            return _studentRepository.Get(i => i.Id == id);
         }
-
         public List<Student> GetAllStudentsByAge(int age)
         {
-            throw new NotImplementedException();
+            return _studentRepository.GetAll(s => s.Age == age);
         }
-
-        public List<Student> GetAllStudentsByGroupId(int id)
+        public List<Student> GetAllStudentsByGroupId(int groupId)
         {
-            throw new NotImplementedException();
-        }
+            var group = _groupService.GetGroupById(groupId);
+            if (group == null) throw new NotFoundException($"Group with ID {groupId} was not found");
 
+            return _studentRepository.GetAll(s => s.Group.Id == groupId);
+        }
         public List<Student> GetAllStudents()
         {
-            throw new NotImplementedException();
+            return _studentRepository.GetAll();
         }
-
-        public List<Student> SearchStudentBySurname(string surname)
+        public List<Student> SearchStudentsByNameOrSurname(string input)
         {
-            throw new NotImplementedException();
+            return _studentRepository.GetAll(s => s.Name.ToLower().Contains(input.ToLower().Trim()) || s.Surname.ToLower().Contains(input.ToLower().Trim()));
         }
-
-
     }
 }
