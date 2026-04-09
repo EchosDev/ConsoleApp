@@ -1,0 +1,17 @@
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppService.deps.json
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppService.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppService.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppCore.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppRepository.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppCore.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\bin\Debug\net10.0\CourseAppRepository.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.csproj.AssemblyReference.cache
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.AssemblyInfoInputs.cache
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.AssemblyInfo.cs
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.csproj.CoreCompileInputs.cache
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAp.E59791DA.Up2Date
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\refint\CourseAppService.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\CourseAppService.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppService\obj\Debug\net10.0\ref\CourseAppService.dll

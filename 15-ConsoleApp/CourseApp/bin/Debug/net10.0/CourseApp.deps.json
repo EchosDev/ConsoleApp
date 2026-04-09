@@ -1,0 +1,74 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "CourseApp/1.0.0": {
+        "dependencies": {
+          "CourseAppCore": "1.0.0",
+          "CourseAppRepository": "1.0.0",
+          "CourseAppService": "1.0.0"
+        },
+        "runtime": {
+          "CourseApp.dll": {}
+        }
+      },
+      "CourseAppCore/1.0.0": {
+        "runtime": {
+          "CourseAppCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CourseAppRepository/1.0.0": {
+        "dependencies": {
+          "CourseAppCore": "1.0.0"
+        },
+        "runtime": {
+          "CourseAppRepository.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CourseAppService/1.0.0": {
+        "dependencies": {
+          "CourseAppCore": "1.0.0",
+          "CourseAppRepository": "1.0.0"
+        },
+        "runtime": {
+          "CourseAppService.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CourseApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CourseAppCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CourseAppRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CourseAppService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

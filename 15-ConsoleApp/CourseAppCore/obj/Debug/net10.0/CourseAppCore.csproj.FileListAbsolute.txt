@@ -1,0 +1,11 @@
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net10.0\CourseAppCore.deps.json
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net10.0\CourseAppCore.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net10.0\CourseAppCore.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.AssemblyInfoInputs.cache
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.AssemblyInfo.cs
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.csproj.CoreCompileInputs.cache
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\refint\CourseAppCore.dll
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\CourseAppCore.pdb
+C:\Users\yek82\Desktop\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net10.0\ref\CourseAppCore.dll
