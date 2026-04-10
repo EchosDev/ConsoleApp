@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA276C12-C7D0-2072-0717-C4337B3C2DDA}|CourseAppRepository\\CourseAppRepository.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapprepository\\data\\studentdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FA276C12-C7D0-2072-0717-C4337B3C2DDA}|CourseAppRepository\\CourseAppRepository.csproj|solutionrelative:courseapprepository\\data\\studentdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapp\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|solutionrelative:courseapp\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapp\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|solutionrelative:courseapp\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapp\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|solutionrelative:courseapp\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA276C12-C7D0-2072-0717-C4337B3C2DDA}|CourseAppRepository\\CourseAppRepository.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapprepository\\data\\groupdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{FA276C12-C7D0-2072-0717-C4337B3C2DDA}|CourseAppRepository\\CourseAppRepository.csproj|solutionrelative:courseapprepository\\data\\groupdata.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|solutionrelative:courseapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\courseapp\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6E58ED2-E152-9F84-D785-DE08573D6E48}|CourseApp\\CourseApp.csproj|solutionrelative:courseapp\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "GroupController.cs",
               "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
               "RelativeDocumentMoniker": "CourseApp\\Controllers\\GroupController.cs",
               "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
               "RelativeToolTip": "CourseApp\\Controllers\\GroupController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAUwNUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T13:03:26.807Z",
               "IsPinned": true,
@@ -58,62 +42,10 @@
               "RelativeDocumentMoniker": "CourseApp\\Controllers\\StudentController.cs",
               "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Controllers\\StudentController.cs",
               "RelativeToolTip": "CourseApp\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBMBAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABkBAAAAAAAAAAA3wDABAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T13:31:42.095Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Helper.cs",
-              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Helpers\\Helper.cs",
-              "RelativeDocumentMoniker": "CourseApp\\Helpers\\Helper.cs",
-              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Helpers\\Helper.cs",
-              "RelativeToolTip": "CourseApp\\Helpers\\Helper.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAwwEsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T13:43:20.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GroupData.json",
-              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\GroupData.json",
-              "RelativeDocumentMoniker": "CourseAppRepository\\Data\\GroupData.json",
-              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\GroupData.json",
-              "RelativeToolTip": "CourseAppRepository\\Data\\GroupData.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-10T13:49:47.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StudentData.json",
-              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\StudentData.json",
-              "RelativeDocumentMoniker": "CourseAppRepository\\Data\\StudentData.json",
-              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\StudentData.json",
-              "RelativeToolTip": "CourseAppRepository\\Data\\StudentData.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-10T13:43:48.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Program.cs",
-              "RelativeDocumentMoniker": "CourseApp\\Program.cs",
-              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseApp\\Program.cs",
-              "RelativeToolTip": "CourseApp\\Program.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wBUAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T12:35:51.469Z",
               "EditorCaption": ""
             }
           ]

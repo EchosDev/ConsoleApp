@@ -17,9 +17,10 @@ namespace CourseApp
 
             Helper.Print(ConsoleColor.Cyan, "COURSE MANAGEMENT SYSTEM v1.0\n");
 
+            Helper.GetAllDatasFromDataBase();
+
             while (true)
             {
-                Helper.GetAllDatasFromDataBase();
                 Console.WriteLine("\n");
                 Helper.Print(ConsoleColor.Yellow, "==== MAIN MENU ====");
                 Helper.Print(ConsoleColor.Yellow, "1.Course Group Menu \n2.Student Menu \n0.Exit");

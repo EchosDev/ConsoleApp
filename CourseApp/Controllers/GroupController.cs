@@ -229,7 +229,7 @@ namespace CourseApp.Controllers
                 Helper.Print(ConsoleColor.Yellow, "=== GROUP MENU ===");
                 Helper.Print(ConsoleColor.Yellow, "1 - Create, \n2 - Update, \n3 - Delete, \n4 - GetById, " +
                 "\n5 - Get By Teacher, \n6 - Get By Room, \n7 - Get All, \n8 - Search by Group Name, \n9 - Write All Group Datas to DataBase," +
-                "\n10 - Back to Main Menu");
+                "\n0 - Back to Main Menu");
 
                 Helper.Print(ConsoleColor.Blue, "Enter Your Choice");
 
@@ -239,7 +239,7 @@ namespace CourseApp.Controllers
 
                 if (isSelectedOption)
                 {
-                    if (selectedOptionNum == 10) break;
+                    if (selectedOptionNum == 0) break;
 
                     switch (selectedOptionNum)
                     {
