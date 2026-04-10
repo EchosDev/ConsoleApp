@@ -9,6 +9,7 @@ namespace CourseApp.Controllers
     public class StudentController
     {
         private static StudentService _studentService = new();
+        private static GroupService _groupService = new();
 
         public void CreateStudent()
         {
@@ -75,7 +76,7 @@ namespace CourseApp.Controllers
 
                     int studentAge;
                     bool isStudentAge = int.TryParse(studentAgeStr, out studentAge);
-
+                GroupIdInput:
                     Helper.Print(ConsoleColor.Blue, "Enter New Student GroupID:");
                     string studentGroupIdStr = Console.ReadLine();
 
@@ -85,8 +86,17 @@ namespace CourseApp.Controllers
 
                     if (isStudentAge && isStudentGroupId)
                     {
-                        var updatedStudent = _studentService.UpdateStudent(studentId, studentName, studentSurname, studentAge, studentGroupId);
-                        Helper.Print(ConsoleColor.Green, $"Student has been updated \nStudent Info: {updatedStudent}");
+                        bool isGroupIdNull = _groupService.GetGroupById(studentGroupId) is not null ? true : false;
+                        if (isGroupIdNull)
+                        {
+                            var updatedStudent = _studentService.UpdateStudent(studentId, studentName, studentSurname, studentAge, studentGroupId);
+                            Helper.Print(ConsoleColor.Green, $"Student has been updated \nStudent Info: {updatedStudent}");
+                        }
+                        else
+                        {
+                            Helper.Print(ConsoleColor.Red, "Please enter valid GroupID value");
+                            goto GroupIdInput;
+                        }
                     }
                     else
                     {
