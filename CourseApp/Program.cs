@@ -19,6 +19,8 @@ namespace CourseApp
 
             while (true)
             {
+                Helper.GetAllDatasFromDataBase();
+                Console.WriteLine("\n");
                 Helper.Print(ConsoleColor.Yellow, "==== MAIN MENU ====");
                 Helper.Print(ConsoleColor.Yellow, "1.Course Group Menu \n2.Student Menu \n0.Exit");
             MainInput:

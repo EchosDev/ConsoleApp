@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "Elmir",
+    "Surname": "Shikhaliyev",
+    "Age": 20,
+    "Group": {
+      "Name": "Apa202",
+      "Teacher": "Seid",
+      "Room": "1",
+      "Id": 1
+    },
+    "Id": 1
+  }
+]

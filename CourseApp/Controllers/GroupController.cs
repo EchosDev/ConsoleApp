@@ -1,11 +1,14 @@
 ﻿using CourseApp.Helpers;
 using CourseAppCore.Entities;
+using CourseAppRepository.Data;
 using CourseAppService.Services.Implementations;
+using System.Text.Json;
 
 namespace CourseApp.Controllers
 {
     public class GroupController
     {
+        private static string _path = "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\GroupData.json";
         private static GroupService _groupService = new();
         public void CreateGroup()
         {
@@ -209,6 +212,15 @@ namespace CourseApp.Controllers
                 goto GroupNameInput;
             }
         }
+        public void WriteToJson()
+        {
+            using FileStream fileStream = new(_path, FileMode.Create);
+            using StreamWriter writer = new(fileStream);
+            var datas = _groupService.GetAllGroups();
+            string json = JsonSerializer.Serialize(datas);
+            writer.Write(json);
+            Helper.Print(ConsoleColor.Green, "All Group of Data Writed to DataBase");
+        }
         public void GroupMenu()
         {
             while (true)
@@ -216,7 +228,8 @@ namespace CourseApp.Controllers
             GroupMenu:
                 Helper.Print(ConsoleColor.Yellow, "=== GROUP MENU ===");
                 Helper.Print(ConsoleColor.Yellow, "1 - Create, \n2 - Update, \n3 - Delete, \n4 - GetById, " +
-                "\n5 - Get By Teacher, \n6 - Get By Room, \n7 - Get All, \n8 - Search by Group Name, \n9 - Back to Main Menu");
+                "\n5 - Get By Teacher, \n6 - Get By Room, \n7 - Get All, \n8 - Search by Group Name, \n9 - Write All Group Datas to DataBase," +
+                "\n10 - Back to Main Menu");
 
                 Helper.Print(ConsoleColor.Blue, "Enter Your Choice");
 
@@ -226,7 +239,7 @@ namespace CourseApp.Controllers
 
                 if (isSelectedOption)
                 {
-                    if (selectedOptionNum == 9) break;
+                    if (selectedOptionNum == 10) break;
 
                     switch (selectedOptionNum)
                     {
@@ -238,6 +251,7 @@ namespace CourseApp.Controllers
                         case 6: GetGroupsByRoom(); break;
                         case 7: GetAllGroups(); break;
                         case 8: SearchForGroupsByName(); break;
+                        case 9: WriteToJson(); break;
                         default:
                             Helper.Print(ConsoleColor.Red, "Please enter valid option value");
                             goto GroupMenu;

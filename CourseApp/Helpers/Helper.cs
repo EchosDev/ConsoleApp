@@ -1,11 +1,18 @@
-﻿using System;
+﻿using CourseAppCore.Entities;
+using CourseAppRepository.Data;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.Json;
 
 namespace CourseApp.Helpers
 {
     public static class Helper
     {
+        private static string _path1 = "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\GroupData.json";
+        private static string _path2 = "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\StudentData.json";
+
         public static void Print(ConsoleColor consoleColor, string text)
         {
             Console.ForegroundColor = consoleColor;
@@ -64,6 +71,45 @@ namespace CourseApp.Helpers
             Thread.Sleep(700);
             Console.ResetColor();
             Console.Clear();
+        }
+
+        public static void GetAllDatasFromDataBase()
+        {
+            using FileStream fileStream1 = new(_path1, FileMode.Open);
+            using StreamReader reader1 = new(fileStream1);
+            string groupDatas = reader1.ReadToEnd();
+
+            using FileStream fileStream2 = new(_path2, FileMode.Open);
+            using StreamReader reader2 = new(fileStream2);
+            string studentDatas = reader2.ReadToEnd();
+
+            List<Student> students;
+            List<CourseGroup> groups;
+
+            try
+            {
+                groups = JsonSerializer.Deserialize<List<CourseGroup>>(groupDatas);
+
+            }
+            catch (Exception)
+            {
+                groups = [];
+            }
+
+            try
+            {
+                students = JsonSerializer.Deserialize<List<Student>>(studentDatas);
+
+            }
+            catch (Exception)
+            {
+                students = [];
+            }
+
+            AppDbContext<CourseGroup>.datas = groups;
+            AppDbContext<Student>.datas = students;
+
+            Helper.Print(ConsoleColor.Green, "All Datas Readed from DataBase");
         }
     }
 }

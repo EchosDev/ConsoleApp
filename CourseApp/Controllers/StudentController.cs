@@ -2,12 +2,15 @@
 using CourseAppCore.Entities;
 using CourseAppService.Services.Implementations;
 using CourseAppService.Services.Interfaces;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace CourseApp.Controllers
 {
     public class StudentController
     {
+        private static string _path = "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\CourseAppRepository\\Data\\StudentData.json";
+
         private static StudentService _studentService = new();
         private static GroupService _groupService = new();
 
@@ -267,6 +270,15 @@ namespace CourseApp.Controllers
                 goto StudentInput;
             }
         }
+        public void WriteToJson()
+        {
+            using FileStream fileStream = new(_path, FileMode.Create);
+            using StreamWriter writer = new(fileStream);
+            var datas = _studentService.GetAllStudents();
+            string json = JsonSerializer.Serialize(datas);
+            writer.Write(json);
+            Helper.Print(ConsoleColor.Green, "All Student`s Data Writed to DataBase");
+        }
         public void StudentMenu()
         {
             while (true)
@@ -274,7 +286,8 @@ namespace CourseApp.Controllers
             StudentMenu:
                 Helper.Print(ConsoleColor.Yellow, "=== STUDENT MENU ===");
                 Helper.Print(ConsoleColor.Yellow, "1 - Create, \n2 - Update, \n3 - Delete, \n4 - GetById, " +
-                "\n5 - Get By Age, \n6 - Get By GroupID, \n7 - Get All, \n8 - Search Student By Name or Surname, \n9 - Back to Main Menu");
+                "\n5 - Get By Age, \n6 - Get By GroupID, \n7 - Get All, \n8 - Search Student By Name or Surname, \n9 - Write All Student Datas to DataBase," +
+                "\n10 - Back to Main Menu");
 
                 Helper.Print(ConsoleColor.Blue, "Enter Your Choice");
 
@@ -284,7 +297,7 @@ namespace CourseApp.Controllers
 
                 if (isSelectedOption)
                 {
-                    if (selectedOptionNum == 9) break;
+                    if (selectedOptionNum == 10) break;
 
                     switch (selectedOptionNum)
                     {
@@ -296,6 +309,7 @@ namespace CourseApp.Controllers
                         case 6: GetStudentsByGroupId(); break;
                         case 7: GetAllStudents(); break;
                         case 8: SearchStudentsByNameOrSurname(); break;
+                        case 9: WriteToJson(); break;
                         default:
                             Helper.Print(ConsoleColor.Red, "Please enter valid option value");
                             goto StudentMenu;
