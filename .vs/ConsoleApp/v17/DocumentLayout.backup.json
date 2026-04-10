@@ -1,12 +1,135 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\SS\\ConsoleApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{175CF18D-3EED-453E-12FC-3ADC08E8DCE5}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\CourseAppCore.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseappcore\\entities\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{175CF18D-3EED-453E-12FC-3ADC08E8DCE5}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\CourseAppCore.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseappcore\\entities\\coursegroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{175CF18D-3EED-453E-12FC-3ADC08E8DCE5}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\CourseAppCore.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseappcore\\helpers\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{175CF18D-3EED-453E-12FC-3ADC08E8DCE5}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\CourseAppCore.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseappcore\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8B7436-A339-A700-1AE4-58B24A2AB780}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseapp\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8B7436-A339-A700-1AE4-58B24A2AB780}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseapp\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C8B7436-A339-A700-1AE4-58B24A2AB780}|..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\CourseApp.csproj|c:\\users\\classtime.pc_3_506_16\\desktop\\apa202\\consoleapp\\15-consoleapp\\courseapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Program.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Program.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:33:30.534Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:40:18.654Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GroupController.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseApp\\Controllers\\GroupController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:40:17.155Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Helper.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Helpers\\Helper.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Helpers\\Helper.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Helpers\\Helper.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Helpers\\Helper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T12:00:01.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\Student.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\Student.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\Student.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:52:05.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseGroup.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\CourseGroup.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\CourseGroup.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\CourseGroup.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Entities\\CourseGroup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:52:01.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Classtime.PC_3_506_16\\Desktop\\APA202\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "..\\..\\ConsoleApp\\15-ConsoleApp\\CourseAppCore\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-10T11:51:58.343Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
