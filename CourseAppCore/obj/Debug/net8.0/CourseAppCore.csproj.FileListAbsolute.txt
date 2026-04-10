@@ -1,0 +1,12 @@
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net8.0\CourseAppCore.deps.json
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net8.0\CourseAppCore.dll
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\bin\Debug\net8.0\CourseAppCore.pdb
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.AssemblyInfoInputs.cache
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.AssemblyInfo.cs
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.csproj.CoreCompileInputs.cache
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.sourcelink.json
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.dll
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\refint\CourseAppCore.dll
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\CourseAppCore.pdb
+C:\Users\Classtime.PC_3_506_16\Desktop\APA202\ConsoleApp\15-ConsoleApp\CourseAppCore\obj\Debug\net8.0\ref\CourseAppCore.dll

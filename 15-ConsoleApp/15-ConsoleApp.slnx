@@ -1,6 +1,0 @@
-<Solution>
-  <Project Path="CourseApp/CourseApp.csproj" />
-  <Project Path="CourseAppCore/CourseAppCore.csproj" />
-  <Project Path="CourseAppRepository/CourseAppRepository.csproj" />
-  <Project Path="CourseAppService/CourseAppService.csproj" />
-</Solution>
