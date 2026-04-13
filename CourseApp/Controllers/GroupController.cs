@@ -21,6 +21,12 @@ namespace CourseApp.Controllers
                 Helper.Print(ConsoleColor.Red, "Please fill Group Name area");
                 goto CreateGroupSection;
             }
+            var existGroup = AppDbContext<CourseGroup>.datas.FindAll(g => g.Name.ToLower().Trim() == groupName);
+            if (existGroup.Count != 0)
+            {
+                Helper.Print(ConsoleColor.Red, "Group Name Already exist");
+                goto CreateGroupSection;
+            }
         TeacherInput:
             Helper.Print(ConsoleColor.Blue, "Enter Teacher:");
             string groupTeacher = Console.ReadLine();
