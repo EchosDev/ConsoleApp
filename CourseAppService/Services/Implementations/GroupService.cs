@@ -1,4 +1,5 @@
 ﻿using CourseAppCore.Entities;
+using CourseAppRepository.Data;
 using CourseAppRepository.Repositories.Implementations;
 using CourseAppService.Services.Interfaces;
 
@@ -6,7 +7,7 @@ namespace CourseAppService.Services.Implementations
 {
     public class GroupService : IGroupService
     {
-        private static int _groupId = 0;
+        private static int _groupId = AppDbContext<CourseGroup>.datas.Count;
         private static GroupRepository _groupRepository = new();
 
         public CourseGroup CreateGroup(CourseGroup group)

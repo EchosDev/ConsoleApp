@@ -1,4 +1,5 @@
 ﻿using CourseAppCore.Entities;
+using CourseAppRepository.Data;
 using CourseAppRepository.Exceptions;
 using CourseAppRepository.Repositories.Implementations;
 using CourseAppService.Services.Interfaces;
@@ -7,7 +8,7 @@ namespace CourseAppService.Services.Implementations
 {
     public class StudentService : IStudentService
     {
-        private static int _studentId = 0;
+        private static int _studentId = AppDbContext<Student>.datas.Count;
         private static StudentRepository _studentRepository = new();
         private static GroupService _groupService = new();
 

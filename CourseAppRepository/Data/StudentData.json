@@ -1,14 +1,1 @@
-[
-  {
-    "Name": "Elmir",
-    "Surname": "Shikhaliyev",
-    "Age": 20,
-    "Group": {
-      "Name": "Apa202",
-      "Teacher": "Seid",
-      "Room": "1",
-      "Id": 1
-    },
-    "Id": 1
-  }
-]
+[{"Name":"Elmir","Surname":"Shikhaliyev","Age":20,"Group":{"Name":"Apa202","Teacher":"Seid","Room":"1","Id":1},"Id":1},{"Name":"Elmir","Surname":"Veliyev","Age":20,"Group":{"Name":"2","Teacher":"Seid","Room":"2","Id":2},"Id":2}]
