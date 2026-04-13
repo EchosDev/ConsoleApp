@@ -152,6 +152,13 @@ namespace CourseApp.Controllers
         GroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Teacher Name");
             string groupTeacher = Console.ReadLine();
+
+            if (groupTeacher.Any(char.IsDigit))
+            {
+                Helper.Print(ConsoleColor.Red, "Teacher name cannot contain numbers!");
+                goto GroupIdInput;
+            }
+
             if (!string.IsNullOrEmpty(groupTeacher))
             {
                 var findedGroups = _groupService.GetAllGroupsByTeacher(groupTeacher);
