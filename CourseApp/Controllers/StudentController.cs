@@ -20,39 +20,87 @@ namespace CourseApp.Controllers
             Helper.Print(ConsoleColor.Blue, "Enter Student Name:");
             string studentName = Console.ReadLine();
 
+            if (string.IsNullOrWhiteSpace(studentName))
+            {
+                Helper.Print(ConsoleColor.Red, "Name cannot be empty!");
+                goto StudentInput;
+            }
+
+            if (studentName.Any(char.IsDigit))
+            {
+                Helper.Print(ConsoleColor.Red, "Name cannot contain numbers!");
+                goto StudentInput;
+            }
+
+        StudentSurnameInput:
             Helper.Print(ConsoleColor.Blue, "Enter Student Surname:");
             string studentSurname = Console.ReadLine();
 
+            if (string.IsNullOrWhiteSpace(studentSurname))
+            {
+                Helper.Print(ConsoleColor.Red, "Surname cannot be empty!");
+                goto StudentSurnameInput;
+            }
+
+            if (studentSurname.Any(char.IsDigit))
+            {
+                Helper.Print(ConsoleColor.Red, "Surname cannot contain numbers!");
+                goto StudentSurnameInput;
+            }
+
+        StudentAgeInput:
             Helper.Print(ConsoleColor.Blue, "Enter Student Age (17+):");
             string studentAgeStr = Console.ReadLine();
 
             int studentAge;
-
             bool isStudentAge = int.TryParse(studentAgeStr, out studentAge);
 
+            if (!isStudentAge)
+            {
+                Helper.Print(ConsoleColor.Red, "Please enter valid age!");
+                goto StudentAgeInput;
+            }
+
+            if (studentAge < 17)
+            {
+                Helper.Print(ConsoleColor.Red, $"Age must be 17+. You entered: {studentAge}");
+                goto StudentAgeInput;
+            }
+
+
+        StudentGroupIdInput:
             Helper.Print(ConsoleColor.Blue, "Enter Student GroupID:");
             string studentGroupIdStr = Console.ReadLine();
 
             int studentGroupId;
-
             bool isStudentGroupId = int.TryParse(studentGroupIdStr, out studentGroupId);
 
-            if (isStudentGroupId && isStudentAge && !string.IsNullOrEmpty(studentName) && !string.IsNullOrEmpty(studentSurname))
+            if (!isStudentGroupId)
             {
-                if (studentAge >= 17)
-                {
-                    Student student = new() { Name = studentName, Surname = studentSurname, Age = studentAge };
-                    var createdStudent = _studentService.CreateStudent(studentGroupId, student);
+                Helper.Print(ConsoleColor.Red, "Please enter valid group id!");
+                goto StudentGroupIdInput;
+            }
 
-                    if (createdStudent is not null) Helper.Print(ConsoleColor.Green, $"Student has been created \nStudent Info: {createdStudent}");
-                }
-                else Helper.Print(ConsoleColor.Red, $"Age must be greater than 17. You entered: {studentAge}");
-            }
-            else
+            var group = _groupService.GetGroupById(studentGroupId);
+
+            if (group is null)
             {
-                Helper.Print(ConsoleColor.Red, "Please enter valid values");
-                goto StudentInput;
+                Helper.Print(ConsoleColor.Red, "Group not found!");
+                goto StudentGroupIdInput;
             }
+
+
+            Student student = new()
+            {
+                Name = studentName,
+                Surname = studentSurname,
+                Age = studentAge
+            };
+
+            var createdStudent = _studentService.CreateStudent(studentGroupId, student);
+
+            if (createdStudent is not null) Helper.Print(ConsoleColor.Green, $"Student has been created \nStudent Info: {createdStudent}");
+            else Helper.Print(ConsoleColor.Red, "Student can`t created");
         }
         public void UpdateStudent()
         {
@@ -68,17 +116,36 @@ namespace CourseApp.Controllers
                 if (isStudentIdNull)
                 {
                     Helper.Print(ConsoleColor.Yellow, "If you don't want to change any value, leave it empty");
+                StudentNameInput:
                     Helper.Print(ConsoleColor.Blue, "Enter New Student Name:");
                     string studentName = Console.ReadLine();
 
+                    if (studentName.Any(char.IsDigit))
+                    {
+                        Helper.Print(ConsoleColor.Red, "Student name cannot contain numbers!");
+                        goto StudentNameInput;
+                    }
+                StudentSurnameInput:
                     Helper.Print(ConsoleColor.Blue, "Enter New Student Surname:");
                     string studentSurname = Console.ReadLine();
+
+                    if (studentSurname.Any(char.IsDigit))
+                    {
+                        Helper.Print(ConsoleColor.Red, "Student name cannot contain numbers!");
+                        goto StudentSurnameInput;
+                    }
+
                 AgeInput:
                     Helper.Print(ConsoleColor.Blue, "Enter New Student Age:");
                     string studentAgeStr = Console.ReadLine();
 
                     int studentAge;
                     bool isStudentAge = int.TryParse(studentAgeStr, out studentAge);
+                    if (!isStudentAge)
+                    {
+                        Helper.Print(ConsoleColor.Red, "Please enter valid Age types");
+                        goto AgeInput;
+                    }
                 GroupIdInput:
                     Helper.Print(ConsoleColor.Blue, "Enter New Student GroupID:");
                     string studentGroupIdStr = Console.ReadLine();
@@ -86,25 +153,23 @@ namespace CourseApp.Controllers
                     int studentGroupId;
 
                     bool isStudentGroupId = int.TryParse(studentGroupIdStr, out studentGroupId);
-
-                    if (isStudentAge && isStudentGroupId)
+                    if (!isStudentGroupId)
                     {
-                        bool isGroupIdNull = _groupService.GetGroupById(studentGroupId) is not null ? true : false;
-                        if (isGroupIdNull)
-                        {
-                            var updatedStudent = _studentService.UpdateStudent(studentId, studentName, studentSurname, studentAge, studentGroupId);
-                            Helper.Print(ConsoleColor.Green, $"Student has been updated \nStudent Info: {updatedStudent}");
-                        }
-                        else
-                        {
-                            Helper.Print(ConsoleColor.Red, "Please enter valid GroupID value");
-                            goto GroupIdInput;
-                        }
+                        Helper.Print(ConsoleColor.Red, "Please enter valid GroupID types");
+                        goto GroupIdInput;
+                    }
+
+                    bool isGroupIdNull = _groupService.GetGroupById(studentGroupId) is not null ? true : false;
+
+                    if (isGroupIdNull)
+                    {
+                        var updatedStudent = _studentService.UpdateStudent(studentId, studentName, studentSurname, studentAge, studentGroupId);
+                        Helper.Print(ConsoleColor.Green, $"Student has been updated \nStudent Info: {updatedStudent}");
                     }
                     else
                     {
-                        Helper.Print(ConsoleColor.Red, "Please enter valid Age Or GroupID types");
-                        goto AgeInput;
+                        Helper.Print(ConsoleColor.Red, "Please enter valid GroupID value");
+                        goto GroupIdInput;
                     }
                 }
                 else

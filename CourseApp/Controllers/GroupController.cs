@@ -16,22 +16,45 @@ namespace CourseApp.Controllers
             Helper.Print(ConsoleColor.Blue, "Enter Group Name:");
             string groupName = Console.ReadLine();
 
+            if (string.IsNullOrWhiteSpace(groupName))
+            {
+                Helper.Print(ConsoleColor.Red, "Please fill Group Name area");
+                goto CreateGroupSection;
+            }
+        TeacherInput:
             Helper.Print(ConsoleColor.Blue, "Enter Teacher:");
             string groupTeacher = Console.ReadLine();
 
+            if (string.IsNullOrWhiteSpace(groupTeacher))
+            {
+                Helper.Print(ConsoleColor.Red, "Please fill Teacher area");
+                goto TeacherInput;
+            }
+
+            if (groupTeacher.Any(char.IsDigit))
+            {
+                Helper.Print(ConsoleColor.Red, "Teacher name cannot contain numbers!");
+                goto TeacherInput;
+            }
+
+            if (groupTeacher.Length < 3 || groupTeacher.Length > 50)
+            {
+                Helper.Print(ConsoleColor.Red, "Name must be 3-50 chars");
+                goto TeacherInput;
+            }
+        RoomInput:
             Helper.Print(ConsoleColor.Blue, "Enter Room:");
             string groupRoom = Console.ReadLine();
-            if (!string.IsNullOrEmpty(groupName) && !string.IsNullOrEmpty(groupTeacher) && !string.IsNullOrEmpty(groupRoom))
+
+            if (string.IsNullOrWhiteSpace(groupRoom))
             {
-                CourseGroup courseGroup = new() { Name = groupName, Teacher = groupTeacher, Room = groupRoom };
-                var createdGroup = _groupService.CreateGroup(courseGroup);
-                Helper.Print(ConsoleColor.Green, $"Group has been created \nGroup Info: {createdGroup}");
+                Helper.Print(ConsoleColor.Red, "Please fill Room area");
+                goto RoomInput;
             }
-            else
-            {
-                Helper.Print(ConsoleColor.Red, "Please enter valid values");
-                goto CreateGroupSection;
-            }
+
+            CourseGroup courseGroup = new() { Name = groupName, Teacher = groupTeacher, Room = groupRoom };
+            var createdGroup = _groupService.CreateGroup(courseGroup);
+            Helper.Print(ConsoleColor.Green, $"Group has been created \nGroup Info: {createdGroup}");
         }
         public void UptadeGroup()
         {
@@ -40,8 +63,6 @@ namespace CourseApp.Controllers
             string groupIdStr = Console.ReadLine();
             int groupId;
             bool isGroupId = int.TryParse(groupIdStr, out groupId);
-
-
 
             if (isGroupId)
             {
@@ -86,6 +107,7 @@ namespace CourseApp.Controllers
             {
                 bool isDeleteSuccesfully = _groupService.DeleteGroup(groupId);
                 if (isDeleteSuccesfully) Helper.Print(ConsoleColor.Green, "Group has been deleted succesfully");
+                else Helper.Print(ConsoleColor.Red, "Group not found!");
             }
             else
             {
